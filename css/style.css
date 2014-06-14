@@ -35,6 +35,7 @@ header a:hover {
     float: left;
     padding: 15px 35px;
     margin-bottom: 0px;
+    border-right: 1px dashed #111;
 }
 .menu li a {
     color: #949494;
