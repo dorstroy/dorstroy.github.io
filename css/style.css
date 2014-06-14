@@ -1,0 +1,57 @@
+/*css*/
+@import "./reset.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./skeleton.css";
+
+body{
+    color: #555;
+    background: #111 url("../images/bg-header.jpg") top center no-repeat;
+}
+header {
+    height: 450px;
+}
+header .htop_line {
+    background: url("../images/bg-header-top.png");
+    height: 75px;
+}
+header a {
+    font-size: 26px ;
+    color: #b7b7b9;
+    margin: 25px;
+    text-decoration: none;
+    float: right;
+}
+header a:hover {
+    color: #ababad;
+}
+.menu {
+    background: #020301;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 0px;
+}
+.menu li {
+    float: left;
+    padding: 15px 35px;
+    margin-bottom: 0px;
+}
+.menu li a {
+    color: #949494;
+    font-size: 18px;
+    text-decoration: none;
+}
+.menu li a:hover {
+    color: #ababad;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.content {
+    min-height: 400px;
+    background-color: #ccc;
+    border-radius: 0 0 15px 15px;
+}
+
+footer {
+    margin-top: 30px;
+}
