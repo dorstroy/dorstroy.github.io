@@ -12,7 +12,9 @@ header {
     height: 450px;
 }
 header .htop_line {
-    background: url("../images/bg-header-top.png");
+    background: #111;
+    opacity: 0.65;
+    filter:alpha(opacity=65);
     height: 75px;
 }
 header a {
