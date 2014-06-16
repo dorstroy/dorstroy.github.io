@@ -49,6 +49,7 @@
                 myMap.geoObjects.add(myPlacemark1);
                 myMap.geoObjects.add(myPlacemark2);
             }
+            $('.year').html( new Date().getFullYear() );
         });
         moveTo = function(elem) {
             $('html, body').animate({ scrollTop: $(elem.href).offset().top }, 1200, 'easeOutQuart');
@@ -146,7 +147,7 @@
         <section>
             <div class="container">
                 <div class="sixteen columns clearfix">
-                    <p class="cp">ООО «Дорстрой» © 2010-2014</p>
+                    <p class="cp">ООО «Дорстрой» © <span class="year"></span></p>
                 </div>
             </div>
         </section>
