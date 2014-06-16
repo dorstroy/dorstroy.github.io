@@ -56,6 +56,7 @@ header a:hover {
     min-height: 400px;
     background-color: #ccc;
     border-radius: 0 0 15px 15px;
+    padding-bottom: 35px;
 }
 #gallery {
     min-height: 200px;
@@ -69,7 +70,59 @@ header a:hover {
     border: 3px solid white;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
 }
+#contacts {
+    min-height: 500px;
+    background-color: #f1f1f1;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
+    border-radius: 3px;
+    margin: 20px;
+    padding: 8px 25px;
+}
+.bold {
+    font-weight: bold;
+}
+.ml {
+    margin-left: 20px;
+}
+.ya-map {
+    width: 473px;
+    height: 400px;
+    border: 3px solid white;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
+}
 
 footer {
     margin-top: 30px;
+}
+
+
+/*=========================RESPONSIVE LAYOUTS===========================*/
+
+@media only screen and (max-width: 995px) {
+    header .htop_line {
+        background: #111;
+        border-radius: 0 0 15px 15px;
+        opacity: 0.65;
+        filter:alpha(opacity=65);
+        height: 75px;
+    }
+    #contacts {
+        min-height: 900px;
+        background-color: #f1f1f1;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
+        border-radius: 3px;
+        margin: 20px;
+        padding: 8px 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ya-map {
+        width: 325px;
+        height: 400px;
+        border: 3px solid white;
+        border-radius: 3px;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
+    }
 }

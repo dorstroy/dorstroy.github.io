@@ -13,6 +13,7 @@
 
     <script type="text/javascript" src="./js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
     <link rel="stylesheet" type="text/css" href="./js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
     <script>
         $(document).ready(function(){
             // Back to Top
@@ -20,6 +21,34 @@
 
             //  Simple image gallery. Uses default settings
             $('.fancybox').fancybox();
+
+            ymaps.ready(init);
+            var myMap,
+                myPlacemark1,
+                myPlacemark2;
+
+            function init(){
+                myMap = new ymaps.Map ("map", {
+                    center: [57.76801, 40.928478],
+                    zoom: 11
+                });
+
+                myPlacemark1 = new ymaps.Placemark([57.758789, 40.875735], {
+                    hintContent: 'ООО «Дорстрой»',
+                    balloonContent: 'ООО «Дорстрой» - проезд Кленовый, д. 25',
+                    iconContent: '1'
+                });
+
+                myPlacemark2 = new ymaps.Placemark([57.775842, 41.029756], {
+                    hintContent: 'ООО «Дорстрой»',
+                    balloonContent: 'ООО «Дорстрой» - ул. Индустриальная, д. 58/18',
+                    iconContent: '2'
+                });
+
+                myMap.behaviors.enable('scrollZoom');
+                myMap.geoObjects.add(myPlacemark1);
+                myMap.geoObjects.add(myPlacemark2);
+            }
         });
         moveTo = function(elem) {
             $('html, body').animate({ scrollTop: $(elem.href).offset().top }, 1200, 'easeOutQuart');
@@ -66,7 +95,46 @@
                             </p>
                         </div>
                         <hr>
-                        <div id="contacts" style="height: 800px"></div>
+                        <div id="contacts">
+                            <div class="six columns">
+                                <h3>Контакты</h3>
+                                <p>
+                                    <span class="bold">1. Адрес:</span><br>
+                                    <span class="ml">
+                                        г. Кострома, поселок Селище,
+                                    </span><br>
+                                    <span class="ml">
+                                        проезд Кленовый, д. 25
+                                    </span><br>
+                                    <span class="bold">тел./факс:</span><br>
+                                    <span class="ml">
+                                        (4942) 53-94-57
+                                    </span>
+                                    <br><br>
+                                    <span class="bold">2. Офис:</span><br>
+                                    <span class="ml">
+                                        г. Кострома, ул. Индустриальная, д. 58/18
+                                    </span><br>
+                                    <span class="bold">тел./факс:</span><br>
+                                    <span class="ml">
+                                        (4942) 64-80-73
+                                    </span>
+                                    <br><br><br>
+                                    <span class="bold">Генеральный директор:</span><br>
+                                    <span class="ml">
+                                        Халтян Алберт Варосович
+                                    </span><br>
+                                    <span class="bold">моб. тел.:</span><br>
+                                    <span class="ml">
+                                        8 (910) 197-93-91
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="eight columns">
+                                <h3>Схема проезда:</h3>
+                                <div id="map" class="ya-map"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
