@@ -4,6 +4,9 @@
 @import "./layout.css";
 @import "./skeleton.css";
 
+html, body, h1, h2, h3, a, p {
+    font-family: Shift,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
 body{
     color: #555;
     background: #111 url("../images/bg-header.jpg") top center no-repeat;
@@ -57,6 +60,7 @@ header a:hover {
 #gallery {
     min-height: 200px;
     background-color: #f1f1f1;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
     margin: 20px;
     border-radius: 3px;
     padding: 8px 25px;
