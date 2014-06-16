@@ -70,6 +70,16 @@ header a:hover {
     min-height: 500px;
     margin-top: 0px;
 }
+.yp {
+    background: url('../images/yellow-point.png') center no-repeat;
+    padding: 20px;
+}
+#services img {
+    border: 3px solid white;
+    margin: 20px;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.22);
+}
 #gallery {
     min-height: 200px;
 }
@@ -101,7 +111,7 @@ footer {
 
 /*=========================RESPONSIVE LAYOUTS===========================*/
 
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 959px) {
     header .htop_line {
         background: #111;
         border-radius: 0 0 15px 15px;
@@ -111,6 +121,12 @@ footer {
     }
     #contacts {
         min-height: 900px;
+    }
+    #services ul {
+        width: 400px;
+    }
+    #services img {
+        display: none;
     }
 }
 
